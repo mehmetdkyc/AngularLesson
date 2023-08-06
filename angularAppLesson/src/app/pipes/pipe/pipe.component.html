@@ -1,0 +1,28 @@
+<p>pipe works!</p>
+<h3>Json formatında gösterme</h3>
+{{person1 | json}}
+
+<h3>UpperCase/LowerCase pipes</h3>
+<p>{{'angular' |uppercase}}</p>
+<p>{{'angular' |lowercase}}</p>
+<p>{{ person1.userName |titlecase}} - {{ person1.lastname |uppercase}}</p>
+
+<h3>Date pipes</h3>
+<p>{{ mydate | date:'dd-MM-yyyy' }}</p>
+<p>{{ mydate | date:'longDate' }}</p>
+<p>{{ mydate | date:'shortTime' }}</p>
+
+<h3>Decimal pipes</h3>
+<p>{{ 5.123456 | number:'1.0-3'}}</p> 
+<p>{{ 5.123456 | number:'1.0-2'}}</p> 
+
+
+<h3>Slice pipes</h3>
+<p>{{ 'Angular' | slice:0:3 }}</p>
+
+<h3>Percent pipes</h3>
+<p>{{ 0.12345 | percent:'1.0-3' }}</p>
+<p>{{ 0.2344 | percent }}</p>
+
+<h3>Custom pipes</h3>
+<p>{{ 'angular' | upperCustomPipe }}</p>
