@@ -7,6 +7,8 @@ import { PipeComponent } from './pipes/pipe/pipe.component';
 import { UpperPipe } from './pipes/upper.pipe';
 import { FormcompComponent } from './forms/formcomp/formcomp.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { FirstservicecomponentComponent } from './component/firstservicecomponent/firstservicecomponent.component';
+import { SecondservicecomponentComponent } from './component/secondservicecomponent/secondservicecomponent.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.co
     PipeComponent,
     UpperPipe,
     FormcompComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    FirstservicecomponentComponent,
+    SecondservicecomponentComponent
   ],
   imports: [
     BrowserModule,
