@@ -30,6 +30,8 @@ let isProd:boolean =false;
     FormsModule,
     ReactiveFormsModule
   ],
+  //buradaki useClass'ın özelliği HelperService'ın kullanılmak istenilen yerde Helper2Service instancenı yollamaktır. Sebebi şu belki test ortamında başka bir işlem yapıyoruzdur metodun içerisinde canlıda
+  //başkadır o yüzden böyle böyle service instancelarını isteğe göre değiştirilebilmektedir. 
   providers: [{provide:HelperService, useClass: isProd ? HelperService : Helper2Service}],
   bootstrap: [AppComponent]
 })
