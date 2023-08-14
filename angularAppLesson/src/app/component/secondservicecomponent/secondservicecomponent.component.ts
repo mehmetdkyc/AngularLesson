@@ -14,6 +14,6 @@ export class SecondservicecomponentComponent implements OnInit  {
   }
   ngOnInit():void{
     console.log(this.helperService.toUpper("dokuyucu"));
-    this.meta.addTag({author:"Gençay",});
+    this.meta.addTag({author:"Gençay"});
   }
 }

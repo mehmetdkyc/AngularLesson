@@ -9,6 +9,10 @@ import { FormcompComponent } from './forms/formcomp/formcomp.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { FirstservicecomponentComponent } from './component/firstservicecomponent/firstservicecomponent.component';
 import { SecondservicecomponentComponent } from './component/secondservicecomponent/secondservicecomponent.component';
+import { HelperService } from './services/helper.service';
+import { Helper2Service } from './services/helper2.service';
+
+let isProd:boolean =false;
 
 @NgModule({
   declarations: [
@@ -26,7 +30,7 @@ import { SecondservicecomponentComponent } from './component/secondservicecompon
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide:HelperService, useClass: isProd ? HelperService : Helper2Service}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
