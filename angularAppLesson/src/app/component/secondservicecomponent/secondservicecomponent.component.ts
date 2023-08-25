@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { HelperService } from 'src/app/services/helper.service';
 
@@ -9,8 +9,8 @@ import { HelperService } from 'src/app/services/helper.service';
 })
 export class SecondservicecomponentComponent implements OnInit  {
 
-  constructor(private helperService:HelperService,private meta:Meta) {
-
+  constructor(private helperService:HelperService,private meta:Meta, @Inject("baseUrl") value:string) {
+    console.log(value);
   }
   ngOnInit():void{
     console.log(this.helperService.toUpper("dokuyucu"));
